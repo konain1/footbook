@@ -17,14 +17,14 @@
     background: #C5E063;
 }
 .cont2{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     width: 60%;
     background: #A4BFEB;
     
 }
 .cont3{
     width: 20%;
-    background-color: #C5E063;
+    /* background-color: #C5E063; */
 }
 .input form{
     text-align: center;
@@ -58,17 +58,54 @@ form .fa-search{
     font-weight: 800;
 }
 .cards{
-    /* border: 3px solid black; */
-    height: 50vh;
+    border: 3px solid black;
+    height: 500px;
     overflow-x: scroll; 
     white-space: nowrap;
+    /* position: relative; */
+    /* flex-direction: column;
+    display: flex; */
+   display: flex;
+   
 }
 .cards::-webkit-scrollbar{
     display: none;
 }
 .card{
     /* border: 1px solid red; */
+    display:flex;
+    height: 250px;
+    min-width: 120px;
+    /* width: 120px; */
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 120px;  
+    background: #fff;
+    border-radius: 28px;
+    align-items: center;
+    justify-content: space-between;
+    /* position: absolute; */
+
+}
+
+
+.cardsss {
+
+    border: 1px solid black;
+    width: 300px;
+    height: 400px;
     display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-color: #222;
+    border-radius: 10px;
+    margin: 10px;
+}
+.addBtn{
+    display: block;
     height: 250px;
     width: 120px;
     flex-direction: column;
@@ -76,12 +113,16 @@ form .fa-search{
     margin-top: 120px;
     background: #fff;
     border-radius: 28px;
-    /* align-items: center; */
-    justify-content: space-between;
-    background-image: url('https://images.unsplash.com/photo-1695095737430-78f5a89aab77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60');
-   
-    
+  justify-content: center;
+  position: absolute;
+  border: 0.5px solid #222;
+}
 
+#upload{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 30%;
 }
 .btndiv{
     display: flex;
@@ -89,14 +130,14 @@ form .fa-search{
     align-items: center;
     height: 30px;
 }
-/* .btn{
+.btn{
     /* margin-bottom: -350px; */
     width: 40px;
     height: 20px;
     border-radius: 2px;
     background: tomato;
     color: #fff;
-    display: none; */
+
 }
 .cir{
     border: 2px solid green;
@@ -148,4 +189,18 @@ form .fa-search{
 }
 .btndiv input {
     display: none;
+}
+
+.left-cards{
+    width: 15%;
+    display: block;
+    flex-direction: column;
+    height: 100%;
+
+}
+.right-cards{
+    width: 100%;
+    display: block;
+    display: flex;
+    height: 100%;
 }
