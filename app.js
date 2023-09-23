@@ -3,21 +3,8 @@
 const cards = document.querySelector('.cards')
 const upload = document.getElementById('upload')
 const rightCard = document.getElementsByClassName('right-cards')[0]
-// const card = document.querySelectorAll('.card')
-// const mycard =document.getElementById('mycard')
 
-// const cir = document.querySelectorAll('.cir')
-
-
-// const input = document.getElementById('btn')
-
-// input.addEventListener('input',(e)=>{ 
-//     let index = e.target
-//     console.log(index)
-//     card.style.backgroundImage = `url(${URL.createObjectURL(input.files[0])})` 
-    
-// })
-
+let index = 0
 function createCard(){
 
     // creating Element
@@ -38,10 +25,10 @@ function createCard(){
 
     // class & id 
     btndiv.className = 'btndiv'
-    cardDiv.className = 'card'
+    cardDiv.className = `card`
     cir.className = 'cir'
 
-
+    console.log(cardDiv)
 
     // append child
     btndiv.appendChild(label)
@@ -52,6 +39,9 @@ function createCard(){
 
     // eveneListener
     input.addEventListener('input',()=>{
+
+        const card = input.parentElement.parentElement;
+        console.log(card)
      cardDiv.style.backgroundImage = `url(${URL.createObjectURL(input.files[0])})` 
 
     })
