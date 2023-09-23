@@ -17,14 +17,16 @@ function createCard(){
 
     // attribute
     input.type = 'file'
-    input.id = 'btn'
+    input.id = `btn-${index}`
+    input.className = 'btn'
     input.accept = 'image/*'
-    label.htmlFor = 'btn'
+    label.htmlFor = `btn-${index}`
     label.innerHTML = 'upload'
 
 
     // class & id 
     btndiv.className = 'btndiv'
+    cardDiv.className = `card-${index}`
     cardDiv.className = `card`
     cir.className = 'cir'
 
@@ -41,9 +43,9 @@ function createCard(){
     input.addEventListener('input',()=>{
 
         const card = input.parentElement.parentElement;
-        console.log(card)
+        console.log(input)
      cardDiv.style.backgroundImage = `url(${URL.createObjectURL(input.files[0])})` 
-
+        index++;
     })
    
 }
