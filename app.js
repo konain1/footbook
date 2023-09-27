@@ -44,7 +44,7 @@ function createCard(){
 
         const card = input.parentElement.parentElement;
         console.log(input)
-     cardDiv.style.backgroundImage = `url(${URL.createObjectURL(input.files[0])})` 
+         cardDiv.style.backgroundImage = `url(${URL.createObjectURL(input.files[0])})` 
         index++;
     })
    
